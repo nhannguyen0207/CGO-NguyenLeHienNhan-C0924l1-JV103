@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mang</title>
+</head>
+<body>
+<script>
+  let n;
+  do {
+    n= prompt("Nhập độ dài của mảng")
+  }while (n<=0||n%1 !=0);
+  let array= [];
+  for (let i=0; i<n; i++) {
+    array.push(+prompt("Nhập phần tử thứ " + (i+1)))
+  }
+  function CheckArray(arr) {
+      let PrimeNum = false;
+      if (array < 2) {
+          PrimeNum = false;
+      }
+      for (let i = 1; i < Math.sqrt(array); i++) {
+          if (array[i] % i === 0) {
+              PrimeNum = true;
+          }
+      }
+  }
+  function checkAllPrime(arr2) {
+      let result = true;
+      for (let i = 0; i < arr.length; i++) {
+          if (!isPrime(arr2[i])) {
+              result = false;
+              break;
+          }
+      }
+      return result;
+  }
+  alert(checkAllPrime(arr2));
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số có 3 chữ số</title>
+</head>
+<body>
+<script>
+    let n= prompt("Nhập số có 4 chữ số");
+    findMaxNumber(n);
+    function findMaxNumber(x){
+        if (x.length==4 && x%1==0) {
+            let max=0
+            for ( let i=0; i<n.length; i++){
+                let newnum= n.slice(0,i)+n.slice(i+1)
+                if (newnum>max){
+                    max=newnum
+                }
+            }
+            alert("số lớn nhất có 3 chữ số là"+max)
+            } else{
+            alert("-1")
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check các cạnh của 1 tam giác</title>
+</head>
+<body>
+<script>
+    let a=+prompt("Nhập giá trị cạnh thứ 1");
+    let b=+prompt("Nhập giá trị cạnh thứ 2");
+    let c=+prompt("Nhâập giá trị cạnh thứ 3");
+    if (a,b,c>0 ){
+        if (a+b>c){
+            if (b+c>a){
+                if (a+c>b){
+                    console.log("Đây là 1 tam giác");
+                }
+            }
+        }
+    }else{
+        console.log("Đây không phải là 1 tam giác");
+    }
+</script>
+</body>
+</html>

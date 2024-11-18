@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng</title>
+</head>
+<body>
+<script>
+   let n;
+   do {
+       n= prompt("Nhập độ dài của mảng")
+   }while (n<=0||n>20||n%1 !=0);
+   let array= [];
+   for (let i=0; i<n; i++) {
+       array.push(+prompt("Nhập phần tử thứ " + (i+1)))
+   }
+   alert(array);
+   let diff=array[1]-array[0];
+   for (i=0; i<array.length; i++){
+       if (array[i+1]-array[i]==diff){
+           alert("TRUE")
+       }else{
+           alert("FALSE")
+       }
+   }
+</script>
+</body>
+</html>

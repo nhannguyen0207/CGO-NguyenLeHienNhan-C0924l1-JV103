@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phân số</title>
+</head>
+<body>
+<script>
+    let phanso= prompt("Nhập phân số");
+    find(phanso);
+    function find(x) {
+        let mang = x.split("/");
+        if (mang.length == 2) {
+            let TuSo = mang[0];
+            let MauSo = mang[1];
+            if (TuSo % 1 == 0 && MauSo % 1 == 0 && MauSo != 0) {
+                alert("TRUE")
+                let UocChungLonNhat = TimUocChungLonNhat(TuSo, MauSo)
+                alert("Phân số là" + (TuSo / UocChungLonNhat) + "/" + (MauSo / UocChungLonNhat))
+            } else {
+                alert("FALSE")
+            }
+        } else {
+            alert("FALSE")
+        }
+    }
+    function TimUocChungLonNhat(n1,n2) {
+        let uoc = 1;
+        if (n1 < n2) {
+            for (let i = 1; i <= n1; i++) {
+                if (n1 % i == 0 && n2 % 1 == 0) {
+                    uoc = i;
+                }
+            }
+        } else {
+            for (let i = 1; i <= n2; i++) {
+                if (n1 % i == 0 && n2 % 1 == 0) {
+                    uoc = i;
+                }
+            }
+        }
+        return uoc;
+    }
+</script>
+</body>
+</html>

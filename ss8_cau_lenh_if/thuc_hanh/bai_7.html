@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Giá điện sinh hoạt</title>
 </head>
 <body>
-$END$
+<span>Số điện đã sử dụng</span>
+<input type="text" id="số điện" placeholder="Nhập số điện">
+<button onclick="TinhToan()">Tính</button>
+<p id="result">Giá tiền</p>
+<script>
+  function TinhToan() {
+    let a=document.getElementById("số điện").value;
+    if (a>150){
+      document.getElementById("result").innerHTML="Giá tiền là: "+ (51000+75000+10000+(a-151)*3000);
+    }else if (a>100){
+      document.getElementById("result").innerHTML="Giá tiền là: "+ (51000+75000+(a-101)*2000);
+    }else if (a>50){
+      document.getElementById("result").innerHTML="Giá tiền là: "+ (51000+(a-51)*1500);
+    }else {
+      document.getElementById("result").innerHTML="Giá tiền là: "+ (a*1000)
+    }
+  }
+</script>
 </body>
 </html>

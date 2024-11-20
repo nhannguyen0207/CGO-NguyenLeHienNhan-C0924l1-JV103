@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Nhập điểm của 1 sinh viên</title>
 </head>
 <body>
-$END$
+<span>Điểm môn vật lý</span>
+<input type="number" id="điểm môn vật lý" placeholder="Nhập điểm môn vật lý">
+<span>Điểm môn hoá</span>
+<input type="number" id="điểm môn hoá" placeholder="Nhập điểm môn hoá">
+<span>Điểm môn sinh học</span>
+<input type="number" id="điểm môn sinh học" placeholder="Nhập điểm môn sinh học">
+<button onclick="Sum_and_Average()">Tính</button>
+<p id="result">Tổng điểm là:</p>
+<p id="Average">Điểm trung bình là:</p>
+<script>
+    function Sum_and_Average() {
+        let ly = parseFloat(document.getElementById("điểm môn vật lý").value);
+        let hoa = parseFloat(document.getElementById("điểm môn hoá").value);
+        let sinh = parseFloat(document.getElementById("điểm môn sinh học").value);
+        let Sum = ly + hoa + sinh;
+        document.getElementById("result").innerHTML = "Tổng điểm là: " + Sum;
+        let Average=parseFloat(Sum/3);
+        document.getElementById("Average").innerHTML= "Điểm trung bình là: " +Average;
+    }
+</script>
 </body>
 </html>

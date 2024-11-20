@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
 </head>
 <body>
-$END$
+<input type="text" id="a" placeholder="Nhập giá trị cho a">
+<input type="text" id="b" placeholder="Nhập giá trị cho b">
+<button onclick="TinhToan()">Tính</button>
+<p id="Giá trị của x">Phương trình có nghiệm là: </p>
+<script>
+    // f(x)=ax+b
+    function TinhToan() {
+        let a=document.getElementById("a").value;
+        let b=document.getElementById("b").value;
+        let x=(-b)/a;
+        if (a==0){
+            document.getElementById("Giá trị của x").innerHTML= "Phương trình vô nghiệm"
+        }else {
+            document.getElementById("Giá trị của x").innerHTML= "Phương trình có nghiệm là: " +x
+        }
+    }
+</script>
 </body>
 </html>

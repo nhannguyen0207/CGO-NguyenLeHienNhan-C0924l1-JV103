@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Chu vi và diện tích hình tròn</title>
 </head>
 <body>
-$END$
+<span>Nhập bán kính hình tròn</span>
+<input type="text" id="radius" placeholder="Nhập bán kính hình tròn">
+<button onclick="ChuViVaDienTich()">Tính </button>
+<p id="ChuVi">Chu vi là </p>
+<p id="Diện tích">Diện tích là </p>
+<script>
+    function ChuViVaDienTich() {
+        let BanKinh= parseFloat(document.getElementById("radius").value)
+        let pi=3.14
+        let ChuVi=BanKinh*pi
+        document.getElementById("ChuVi").innerHTML="Chu vi là " +ChuVi;
+        let Dientich=pi*BanKinh*BanKinh;
+        document.getElementById("Diện tích").innerHTML= "Diện tích là "+ Dientich
+    }
+</script>
+
 </body>
 </html>

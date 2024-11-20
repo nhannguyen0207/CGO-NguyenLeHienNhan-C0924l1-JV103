@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num;
+    do {
+        num= prompt("Nhập một số")
+    }while (num<=0|| num%1 !=0 );
+    function TimUoc(n) {
+        let sum = 0;
+        for (let i = 1; i <= n / 2; i++) {
+            if (n % i === 0) {
+                sum += i;
+            }
+        }
+        return sum === n;
+    }
+    let result= TimUoc();
+    if (result ===num){
+        console.log("Đây là không phải một số hoàn hảo")
+    }else{
+        console.log("Đây là một số hoàn hảo")
+    }
+</script>
+</body>
+</html>

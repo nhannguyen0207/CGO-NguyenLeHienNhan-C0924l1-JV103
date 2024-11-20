@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+<script>
+  let a=prompt("Nhập điểm kiểm tra")
+  let b=prompt("Nhập điểm thi giữa kì")
+  let c=prompt("Nhập điểm thi cuối kì")
+  let average=(a+2*b+3*c)/6
+  if (average>=8){
+      console.log("Học lực giỏi")
+  }else if (average>=6.5 && average<8){
+      console.log("Học sinh khá")
+  }else if (average>=5 && average<6.5){
+      console.log("Học sinh trung bình")
+  }else {
+      console.log("Học sinh yếu")
+  }
+``
+</script>
+</body>
+</html>

@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
 </head>
 <body>
-$END$
+<input type="text" id="number 1" placeholder="Nhập số thứ nhất">
+<input type="text" id="number 2" placeholder="Nhập số thứ hai">
+<button onclick="Cong()">Cộng</button>
+<button onclick="Tru()">Trừ</button>
+<div id="tổng">Kết quả là</div>
+<script>
+    function Cong() {
+        let a=document.getElementById("number 1").value;
+        let b=document.getElementById("number 2").value;
+        let sum=Number(a)+Number(b);
+        document.getElementById("tổng").innerHTML="Kết quả là " + sum;
+    }
+    function Tru() {
+        let a = document.getElementById("number 1").value;
+        let b = document.getElementById("number 2").value;
+        let minus = Number(a) - Number(b);
+        document.getElementById("tổng").innerHTML = "Kết quả là " + minus;
+    }
+</script>
 </body>
 </html>

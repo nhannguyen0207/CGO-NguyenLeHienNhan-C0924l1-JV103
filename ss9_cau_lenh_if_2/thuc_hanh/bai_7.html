@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Giải phương trình bậc 2 </title>
 </head>
 <body>
-$END$
+<input type="text" id="a" placeholder="Nhập giá trị cho a">
+<input type="text" id="b" placeholder="Nhập giá trị cho b">
+<input type="text" id="c" placeholder="Nhập giá trị cho c">
+<button onclick="Nghiem()">Tính</button>
+<div id="result"></div>
+<script>
+  function Nghiem() {
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let c = document.getElementById("c").value;
+    if (a == 0 && b==0) {
+      document.getElementById("result").innerHTML = "Phương trình vô nghiệm";
+    } else if (a == 0) {
+      let x=(-c)/a;
+      document.getElementById("result").innerHTML = "Phương trình có nghiệm là: " +x;
+    } else {
+      let delta = Math.pow(b, 2) - 4 * a * c;
+      if (delta < 0) {
+        document.getElementById("result").innerHTML = "Phương trình vô nghiệm";
+      } else if (delta == 0) {
+        document.getElementById("result").innerHTML = "Phương trình có 1 nghiệm duy nhất là: " + ((-b) / (2 * a));
+      } else {
+        let x1 = ((-b - Math.sqrt(delta, 2)) / (2 * a));
+        let x2 = ((-b + Math.sqrt(delta, 2)) / (2 * a));
+        document.getElementById("result").innerHTML = "Phương trình có nghiệm x1 là: " +x1
+
+      }
+    }
+  }
+</script>
 </body>
 </html>

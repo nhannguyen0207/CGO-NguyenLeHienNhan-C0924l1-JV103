@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        let n
+        do {
+        n= prompt("Nhập độ dài của mảng")
+    }while (n<=0||n>50||n%1 !=0);
+        let array= [];
+        for (let i=0; i<n; i++) {
+        array.push(+prompt("Nhập phần tử thứ " + (i+1)))
+    }
+        function TrungBInhCong() {
+            let sum = 0;
+            let count = 0
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] % 3 === 0) {
+                    sum += array[i];
+                    count++
+                }
+            }
+            if (count > 0) {
+                return sum / count;
+            } else {
+                return 0;
+            }
+        }
+        let result =TrungBInhCong()
+        if (result != 0){
+            console.log("trung bình cộng là",result)
+        }else
+            console.log("Không có giá trị phù hợp")
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const input = prompt("Nhập tháng và năm ");
+    function IsLeapYear(year) {
+        return (year % 4 == 0 && year % 100 != 0) || (year % 400 === 0)
+    }
+    function daysInMonth(month,year) {
+        let day= [31,28,31,30,31,30,31,31,30,31,30,31]
+        if (month==2){
+            return isLeapYear(year) ?29?28
+        }else {
+            return DaysInMonth[month-1]
+        }
+    }
+    function validDate() {
+        const regex = /^(0[1-9]|1[0-2])\/\d{4}$/;
+        return regex.test(input);
+    }
+    if (validateInput(input)) {
+        const [month, year] = input.split("/").map(Number);
+
+        const days = daysInMonth(month, year);
+        console.log(`Tháng ${month}/${year} có ${days} ngày.`);
+    } else {
+        console.log("Định dạng không hợp lệ. Vui lòng nhập theo định dạng MM/yyyy.");
+    }
+</script>
+
+</body>
+</html>

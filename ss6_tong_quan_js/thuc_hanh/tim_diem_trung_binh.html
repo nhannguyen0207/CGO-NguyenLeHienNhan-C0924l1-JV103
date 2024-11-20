@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tìm điểm trung bình</title>
 </head>
 <body>
-$END$
+<span> Điểm trung bình môn toán</span>
+<input type="number" id="điểm trung bình môn toán" placeholder="Nhập điểm trung bình môn toán">
+<span> Điểm trung bình môn lý</span>
+<input type="number" id="điểm trung bình môn lý" placeholder="Nhập điểm trung bình môn lý">
+<span> Điểm trung bình môn hoá</span>
+<input type="number" id="điểm trung bình môn hoá" placeholder="Nhập điểm trung bình môn hoá">
+<button onclick="DiemTrungBInh()">Tính</button>
+<script>
+    function DiemTrungBInh() {
+        let toan = parseFloat(document.getElementById("điểm trung bình môn toán").value);
+        let ly = parseFloat(document.getElementById("điểm trung bình môn lý").value);
+        let hoa = parseFloat(document.getElementById("điểm trung bình môn hoá").value);
+        let DiemTrungBinh = parseFloat((toan + ly + hoa) / 3);
+        alert("DiemTrungBinh " + DiemTrungBinh);
+    }
+</script>
 </body>
 </html>
